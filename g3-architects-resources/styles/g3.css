@@ -105,6 +105,52 @@ main > section {
 .quick-list {
   font-weight: 500;
 }
+/* featre section related styles */
+.features {
+  gap: 140px;
+  position: relative;
+}
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+.feature-card {
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin: 20px;
+  border-radius: 8px;
+}
+.feature-card .feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.batch {
+  max-width: 258px;
+  margin-top: -123px;
+  margin-left: -92px;
+  background-color: #ff900e;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding: 45px;
+  position: absolute;
+  z-index: 10;
+}
+#i1 {
+  font-weight: 700;
+  font-size: 4.06rem;
+  color: white;
+}
+#i2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+}
+.feature-img img {
+  width: 100%;
+}
 
 /* some facts related styles */
 .facts-container {
@@ -150,11 +196,26 @@ main > section {
   filter: grayscale(100%);
 }
 
+/* footer */
+.footer {
+  max-width: 1440px;
+  height: 100px;
+  margin: 50px auto;
+  background-color: #fff4e7;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #424242;
+  text-align: center;
+  align-content: center;
+}
+
 /* Responsive media query */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .features,
+  .feature-img {
     flex-direction: column;
   }
   .team-image-container,
@@ -165,11 +226,17 @@ main > section {
   .our-feature {
     margin-left: 20px;
   }
-  .facts-container,.sponsor-companies {
+  .facts-container,
+  .sponsor-companies {
     justify-items: center;
     gap: 24px;
   }
-
+  .batch {
+    position: static;
+    margin: 20px auto;
+    padding: 10px;
+    font-weight: 500;
+  }
 }
 
 /* medium size device */
@@ -180,9 +247,14 @@ main > section {
   .our-feature {
     margin-left: 50px auto;
   }
-  .sponsor-companies,.facts-container{
-    grid-template-columns: repeat(2,1fr);
-    gap:50px;
+  .sponsor-companies,
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
     justify-items: center;
+  }
+  .batch {
+    position: static;
+    margin: 20px auto;
   }
 }
